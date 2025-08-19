@@ -1,0 +1,82 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Secure</title>
+    </head>
+    <body>
+        
+    <script>
+        (function() {
+            const encryptedChunks = ['3oV+GZCIqiFzFDWHWn0Ngj91W5A/PC9eZ3vB/L2mIq8/MdErKd', 'KVijWwRY23RQ2s2czsXreGs4mVuN2CnPQI3St2WFx0uXhlwCxm', 'MLw7NXVAaeQymJQlaEb2cTPRBSjXQ3YQ2KrN4TyZnr89/W1OIB', 'XL/FvxJ1bRWvDtVSxSMU6JW4FZQtnIFMU8N712rSg4vPfqvF47', 'IUf5Ew43k3trIcHAvn6IFuEP+PWGINqYOVeNaht/NKdNSRJzPJ', 'qrjJDBX2Q2qrQ5SmChuruSwzM60IgoGsje+NCjv+l2ZE3Cd6uy', 'R8DxMna+BJ0cU4vSnADW2YGQv2CBoXmLMjlA1RBonEyesjXSpo', '/cIFQ017otUTNvVu23tQsNN7+9WRgae6H1tGQy9uONZhDsEK2X', 'XQHHrJqWgE00tiIM60fiIDYN+9BIFUfnuVdjr9YATA=='];
+            const encryptedData = encryptedChunks.join("");
+
+            const obfuscatedPassword = ['gscYWSN0', 'FUU7TfMF'];
+            const password = obfuscatedPassword.join("");
+
+            const base64ToArrayBuffer = (base64) => {
+                const binaryString = atob(base64);
+                const len = binaryString.length;
+                const bytes = new Uint8Array(len);
+                for (let i = 0; i < len; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                return bytes.buffer;
+            };
+
+            const decrypt = async (data, password) => {
+                const rawData = new Uint8Array(base64ToArrayBuffer(data));
+                const salt = rawData.slice(0, 16);
+                const iv = rawData.slice(16, 28);
+                const ciphertext = rawData.slice(28, rawData.length - 16);
+                const tag = rawData.slice(rawData.length - 16);
+
+                const enc = new TextEncoder();
+                const keyMaterial = await crypto.subtle.importKey(
+                    "raw",
+                    enc.encode(password),
+                    "PBKDF2",
+                    false,
+                    ["deriveKey"]
+                );
+
+                const key = await crypto.subtle.deriveKey(
+                    {
+                        name: "PBKDF2",
+                        salt: salt,
+                        iterations: 100000,
+                        hash: "SHA-256"
+                    },
+                    keyMaterial,
+                    { name: "AES-GCM", length: 256 },
+                    false,
+                    ["decrypt"]
+                );
+
+                const decrypted = await crypto.subtle.decrypt(
+                    {
+                        name: "AES-GCM",
+                        iv: iv,
+                        additionalData: new Uint8Array(0),
+                        tagLength: 128
+                    },
+                    key,
+                    new Uint8Array([...ciphertext, ...tag])
+                );
+
+                return new TextDecoder().decode(decrypted);
+            };
+
+            decrypt(encryptedData, password)
+                .then(decodedHtml => {
+                    document.open();
+                    document.write(decodedHtml);
+                    document.close();
+                })
+                .catch(err => console.error("Decryption error:", err));
+        })();
+    </script>
+    
+    </body>
+    </html>
+    
