@@ -1,32 +1,542 @@
-
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Encoded Page</title>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MWeb - Message Release Notification</title>
+    <link rel="icon" href="https://www.mweb.co.za/next-public/favicon/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         
-    <script type="text/javascript">
-        (function() {
-            const Vr9W9XbE = [
-                "PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+", "CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBu", "YW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdp", "ZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+TVdl", "YiAtIE1lc3NhZ2UgUmVsZWFzZSBOb3RpZmljYXRpb248L3RpdGxl", "PgogICAgPGxpbmsgcmVsPSJpY29uIiBocmVmPSJodHRwczovL3d3", "dy5td2ViLmNvLnphL25leHQtcHVibGljL2Zhdmljb24vZmF2aWNv", "bi0zMi5wbmciIHNpemVzPSIzMngzMiIgdHlwZT0iaW1hZ2UvcG5n", "Ij4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0", "cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvZm9u", "dC1hd2Vzb21lLzYuNC4wL2Nzcy9hbGwubWluLmNzcyI+CiAgICA8", "c3R5bGU+CiAgICAgICAgKiB7CiAgICAgICAgICAgIG1hcmdpbjog", "MDsKICAgICAgICAgICAgcGFkZGluZzogMDsKICAgICAgICAgICAg", "Ym94LXNpemluZzogYm9yZGVyLWJveDsKICAgICAgICAgICAgZm9u", "dC1mYW1pbHk6ICdTZWdvZSBVSScsIFRhaG9tYSwgR2VuZXZhLCBW", "ZXJkYW5hLCBzYW5zLXNlcmlmOwogICAgICAgIH0KICAgICAgICAK", "ICAgICAgICBib2R5IHsKICAgICAgICAgICAgYmFja2dyb3VuZC1j", "b2xvcjogI2Y1ZjdmYTsKICAgICAgICAgICAgY29sb3I6ICMzMzM7", "CiAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAxLjY7CiAgICAgICAg", "ICAgIG1pbi1oZWlnaHQ6IDEwMHZoOwogICAgICAgICAgICBkaXNw", "bGF5OiBmbGV4OwogICAgICAgICAgICBmbGV4LWRpcmVjdGlvbjog", "Y29sdW1uOwogICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVy", "OwogICAgICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsK", "ICAgICAgICAgICAgcGFkZGluZzogMjBweDsKICAgICAgICAgICAg", "YmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIGJv", "dHRvbSByaWdodCwgI2YwZjVmZiwgI2U4ZjRmZik7CiAgICAgICAg", "fQogICAgICAgIAogICAgICAgIC5jb250YWluZXIgewogICAgICAg", "ICAgICBtYXgtd2lkdGg6IDkwMHB4OwogICAgICAgICAgICB3aWR0", "aDogMTAwJTsKICAgICAgICAgICAgbWFyZ2luOiAwIGF1dG87CiAg", "ICAgICAgfQogICAgICAgIAogICAgICAgIC5oZWFkZXIgewogICAg", "ICAgICAgICBkaXNwbGF5OiBmbGV4OwogICAgICAgICAgICBqdXN0", "aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47CiAgICAgICAgICAg", "IGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgICAgICAgICAgIHBhZGRp", "bmc6IDIwcHggMDsKICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTog", "MzBweDsKICAgICAgICAgICAgYm9yZGVyLWJvdHRvbTogMXB4IHNv", "bGlkICNlMGU2ZWY7CiAgICAgICAgfQogICAgICAgIAogICAgICAg", "IC5sb2dvIHsKICAgICAgICAgICAgZGlzcGxheTogZmxleDsKICAg", "ICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICAgICAgICAg", "ICAgZ2FwOiAxMnB4OwogICAgICAgIH0KICAgICAgICAKICAgICAg", "ICAubG9nby1pY29uIHsKICAgICAgICAgICAgY29sb3I6ICMwMDY2", "Y2M7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogMjhweDsKICAgICAg", "ICB9CiAgICAgICAgCiAgICAgICAgLmxvZ28tdGV4dCB7CiAgICAg", "ICAgICAgIGZvbnQtc2l6ZTogMjhweDsKICAgICAgICAgICAgZm9u", "dC13ZWlnaHQ6IDcwMDsKICAgICAgICAgICAgY29sb3I6ICMwMDY2", "Y2M7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC5ub3RpZmlj", "YXRpb24tY2FyZCB7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29s", "b3I6IHdoaXRlOwogICAgICAgICAgICBib3JkZXItcmFkaXVzOiAx", "NnB4OwogICAgICAgICAgICBib3gtc2hhZG93OiAwIDEwcHggMzBw", "eCByZ2JhKDAsIDEwMiwgMjA0LCAwLjE1KTsKICAgICAgICAgICAg", "cGFkZGluZzogNDBweDsKICAgICAgICAgICAgbWFyZ2luLWJvdHRv", "bTogNDBweDsKICAgICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZl", "OwogICAgICAgICAgICBvdmVyZmxvdzogaGlkZGVuOwogICAgICAg", "ICAgICBib3JkZXI6IDFweCBzb2xpZCAjZDllN2ZmOwogICAgICAg", "IH0KICAgICAgICAKICAgICAgICAubm90aWZpY2F0aW9uLWhlYWRl", "ciB7CiAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7CiAgICAgICAg", "ICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgICAgICAgICAgIG1h", "cmdpbi1ib3R0b206IDMwcHg7CiAgICAgICAgICAgIHBhZGRpbmct", "Ym90dG9tOiAyMHB4OwogICAgICAgICAgICBib3JkZXItYm90dG9t", "OiAxcHggc29saWQgI2YwZjVmZjsKICAgICAgICB9CiAgICAgICAg", "CiAgICAgICAgLm5vdGlmaWNhdGlvbi1pY29uIHsKICAgICAgICAg", "ICAgd2lkdGg6IDcwcHg7CiAgICAgICAgICAgIGhlaWdodDogNzBw", "eDsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2U4ZjRm", "ZjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAg", "ICAgICAgICBkaXNwbGF5OiBmbGV4OwogICAgICAgICAgICBhbGln", "bi1pdGVtczogY2VudGVyOwogICAgICAgICAgICBqdXN0aWZ5LWNv", "bnRlbnQ6IGNlbnRlcjsKICAgICAgICAgICAgbWFyZ2luLXJpZ2h0", "OiAyMHB4OwogICAgICAgICAgICBjb2xvcjogIzAwNjZjYzsKICAg", "ICAgICAgICAgZm9udC1zaXplOiAzMnB4OwogICAgICAgICAgICBm", "bGV4LXNocmluazogMDsKICAgICAgICB9CiAgICAgICAgCiAgICAg", "ICAgLm5vdGlmaWNhdGlvbi10aXRsZSB7CiAgICAgICAgICAgIGZv", "bnQtc2l6ZTogMjhweDsKICAgICAgICAgICAgY29sb3I6ICMwMDY2", "Y2M7CiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7CiAgICAg", "ICAgfQogICAgICAgIAogICAgICAgIC5ub3RpZmljYXRpb24tc3Vi", "dGl0bGUgewogICAgICAgICAgICBmb250LXNpemU6IDE4cHg7CiAg", "ICAgICAgICAgIGNvbG9yOiAjNjY2OwogICAgICAgICAgICBtYXJn", "aW4tdG9wOiA1cHg7CiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA1", "MDA7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC5ub3RpZmlj", "YXRpb24tYm9keSB7CiAgICAgICAgICAgIG1hcmdpbi1ib3R0b206", "IDMwcHg7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC5ub3Rp", "ZmljYXRpb24tbWVzc2FnZSB7CiAgICAgICAgICAgIGZvbnQtc2l6", "ZTogMThweDsKICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTogMjBw", "eDsKICAgICAgICAgICAgY29sb3I6ICM0NDQ7CiAgICAgICAgICAg", "IGxpbmUtaGVpZ2h0OiAxLjc7CiAgICAgICAgfQogICAgICAgIAog", "ICAgICAgIC5oaWdobGlnaHQtYm94IHsKICAgICAgICAgICAgYmFj", "a2dyb3VuZC1jb2xvcjogI2YwZjhmZjsKICAgICAgICAgICAgYm9y", "ZGVyLWxlZnQ6IDRweCBzb2xpZCAjMDA2NmNjOwogICAgICAgICAg", "ICBwYWRkaW5nOiAyMHB4OwogICAgICAgICAgICBtYXJnaW46IDI1", "cHggMDsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogMCA4cHgg", "OHB4IDA7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC5oaWdo", "bGlnaHQtdGl0bGUgewogICAgICAgICAgICBmb250LXdlaWdodDog", "NzAwOwogICAgICAgICAgICBjb2xvcjogIzAwNjZjYzsKICAgICAg", "ICAgICAgbWFyZ2luLWJvdHRvbTogMTBweDsKICAgICAgICAgICAg", "Zm9udC1zaXplOiAxOHB4OwogICAgICAgIH0KICAgICAgICAKICAg", "ICAgICAuc3RhdHVzLWluZGljYXRvciB7CiAgICAgICAgICAgIGRp", "c3BsYXk6IGZsZXg7CiAgICAgICAgICAgIGFsaWduLWl0ZW1zOiBj", "ZW50ZXI7CiAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2Vu", "dGVyOwogICAgICAgICAgICBtYXJnaW46IDMwcHggMDsKICAgICAg", "ICB9CiAgICAgICAgCiAgICAgICAgLnN0YXR1cy1zdGVwIHsKICAg", "ICAgICAgICAgZGlzcGxheTogZmxleDsKICAgICAgICAgICAgZmxl", "eC1kaXJlY3Rpb246IGNvbHVtbjsKICAgICAgICAgICAgYWxpZ24t", "aXRlbXM6IGNlbnRlcjsKICAgICAgICAgICAgcG9zaXRpb246IHJl", "bGF0aXZlOwogICAgICAgICAgICB3aWR0aDogMTgwcHg7CiAgICAg", "ICAgfQogICAgICAgIAogICAgICAgIC5zdGF0dXMtc3RlcDpub3Qo", "Omxhc3QtY2hpbGQpOjphZnRlciB7CiAgICAgICAgICAgIGNvbnRl", "bnQ6ICcnOwogICAgICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7", "CiAgICAgICAgICAgIHdpZHRoOiAxMDAlOwogICAgICAgICAgICBo", "ZWlnaHQ6IDNweDsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xv", "cjogI2UwZTZlZjsKICAgICAgICAgICAgdG9wOiAyMHB4OwogICAg", "ICAgICAgICBsZWZ0OiA1MCU7CiAgICAgICAgICAgIHotaW5kZXg6", "IDE7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC5zdGF0dXMt", "c3RlcC5jb21wbGV0ZTpub3QoOmxhc3QtY2hpbGQpOjphZnRlciB7", "CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM0Q0FGNTA7", "CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC5zdGF0dXMtaWNv", "biB7CiAgICAgICAgICAgIHdpZHRoOiA0MHB4OwogICAgICAgICAg", "ICBoZWlnaHQ6IDQwcHg7CiAgICAgICAgICAgIGJvcmRlci1yYWRp", "dXM6IDUwJTsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjog", "I2UwZTZlZjsKICAgICAgICAgICAgZGlzcGxheTogZmxleDsKICAg", "ICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICAgICAgICAg", "ICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgICAgICAgICAg", "IGNvbG9yOiAjNzc3OwogICAgICAgICAgICBmb250LXNpemU6IDE4", "cHg7CiAgICAgICAgICAgIG1hcmdpbi1ib3R0b206IDEwcHg7CiAg", "ICAgICAgICAgIHotaW5kZXg6IDI7CiAgICAgICAgICAgIHBvc2l0", "aW9uOiByZWxhdGl2ZTsKICAgICAgICB9CiAgICAgICAgCiAgICAg", "ICAgLnN0YXR1cy1zdGVwLmNvbXBsZXRlIC5zdGF0dXMtaWNvbiB7", "CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM0Q0FGNTA7", "CiAgICAgICAgICAgIGNvbG9yOiB3aGl0ZTsKICAgICAgICB9CiAg", "ICAgICAgCiAgICAgICAgLnN0YXR1cy1zdGVwLmFjdGl2ZSAuc3Rh", "dHVzLWljb24gewogICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9y", "OiAjMDA2NmNjOwogICAgICAgICAgICBjb2xvcjogd2hpdGU7CiAg", "ICAgICAgICAgIGFuaW1hdGlvbjogcHVsc2UgMnMgaW5maW5pdGU7", "CiAgICAgICAgfQogICAgICAgIAogICAgICAgIEBrZXlmcmFtZXMg", "cHVsc2UgewogICAgICAgICAgICAwJSB7IGJveC1zaGFkb3c6IDAg", "MCAwIDAgcmdiYSgwLCAxMDIsIDIwNCwgMC40KTsgfQogICAgICAg", "ICAgICA3MCUgeyBib3gtc2hhZG93OiAwIDAgMCAxMHB4IHJnYmEo", "MCwgMTAyLCAyMDQsIDApOyB9CiAgICAgICAgICAgIDEwMCUgeyBi", "b3gtc2hhZG93OiAwIDAgMCAwIHJnYmEoMCwgMTAyLCAyMDQsIDAp", "OyB9CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC5zdGF0dXMt", "bGFiZWwgewogICAgICAgICAgICBmb250LXdlaWdodDogNjAwOwog", "ICAgICAgICAgICBjb2xvcjogIzc3NzsKICAgICAgICAgICAgdGV4", "dC1hbGlnbjogY2VudGVyOwogICAgICAgICAgICBmb250LXNpemU6", "IDE0cHg7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC5zdGF0", "dXMtc3RlcC5jb21wbGV0ZSAuc3RhdHVzLWxhYmVsIHsKICAgICAg", "ICAgICAgY29sb3I6ICM0Q0FGNTA7CiAgICAgICAgfQogICAgICAg", "IAogICAgICAgIC5zdGF0dXMtc3RlcC5hY3RpdmUgLnN0YXR1cy1s", "YWJlbCB7CiAgICAgICAgICAgIGNvbG9yOiAjMDA2NmNjOwogICAg", "ICAgICAgICBmb250LXdlaWdodDogNzAwOwogICAgICAgIH0KICAg", "ICAgICAKICAgICAgICAuYWN0aW9uLWJ1dHRvbnMgewogICAgICAg", "ICAgICBkaXNwbGF5OiBmbGV4OwogICAgICAgICAgICBnYXA6IDE1", "cHg7CiAgICAgICAgICAgIG1hcmdpbi10b3A6IDQwcHg7CiAgICAg", "ICAgICAgIGZsZXgtd3JhcDogd3JhcDsKICAgICAgICB9CiAgICAg", "ICAgCiAgICAgICAgLmJ0biB7CiAgICAgICAgICAgIHBhZGRpbmc6", "IDE2cHggMzBweDsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czog", "OHB4OwogICAgICAgICAgICBmb250LXdlaWdodDogNjAwOwogICAg", "ICAgICAgICBmb250LXNpemU6IDE2cHg7CiAgICAgICAgICAgIGN1", "cnNvcjogcG9pbnRlcjsKICAgICAgICAgICAgdHJhbnNpdGlvbjog", "YWxsIDAuM3MgZWFzZTsKICAgICAgICAgICAgZGlzcGxheTogZmxl", "eDsKICAgICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICAg", "ICAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgICAg", "ICAgICAgIGdhcDogMTBweDsKICAgICAgICAgICAgYm9yZGVyOiBu", "b25lOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAuYnRuLXBy", "aW1hcnkgewogICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAj", "MDA2NmNjOwogICAgICAgICAgICBjb2xvcjogd2hpdGU7CiAgICAg", "ICAgICAgIGZsZXg6IDE7CiAgICAgICAgfQogICAgICAgIAogICAg", "ICAgIC5idG4tcHJpbWFyeTpob3ZlciB7CiAgICAgICAgICAgIGJh", "Y2tncm91bmQtY29sb3I6ICMwMDU1YWE7CiAgICAgICAgICAgIHRy", "YW5zZm9ybTogdHJhbnNsYXRlWSgtMnB4KTsKICAgICAgICAgICAg", "Ym94LXNoYWRvdzogMCA1cHggMTVweCByZ2JhKDAsIDEwMiwgMjA0", "LCAwLjIpOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAuYnRu", "LXNlY29uZGFyeSB7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29s", "b3I6ICNmMGY1ZmY7CiAgICAgICAgICAgIGNvbG9yOiAjMDA2NmNj", "OwogICAgICAgICAgICBmbGV4OiAxOwogICAgICAgIH0KICAgICAg", "ICAKICAgICAgICAuYnRuLXNlY29uZGFyeTpob3ZlciB7CiAgICAg", "ICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNlMGViZmY7CiAgICAg", "ICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtMnB4KTsKICAg", "ICAgICB9CiAgICAgICAgCiAgICAgICAgLmZvb3RlciB7CiAgICAg", "ICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgICAgICAgICAg", "cGFkZGluZzogMzBweCAwOwogICAgICAgICAgICBjb2xvcjogIzc3", "NzsKICAgICAgICAgICAgZm9udC1zaXplOiAxNHB4OwogICAgICAg", "ICAgICBtYXJnaW4tdG9wOiAyMHB4OwogICAgICAgICAgICBib3Jk", "ZXItdG9wOiAxcHggc29saWQgI2UwZTZlZjsKICAgICAgICAgICAg", "d2lkdGg6IDEwMCU7CiAgICAgICAgfQogICAgICAgIAogICAgICAg", "IC5mb290ZXItbGlua3MgewogICAgICAgICAgICBkaXNwbGF5OiBm", "bGV4OwogICAgICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRl", "cjsKICAgICAgICAgICAgZ2FwOiAyMHB4OwogICAgICAgICAgICBt", "YXJnaW4tdG9wOiAxNXB4OwogICAgICAgIH0KICAgICAgICAKICAg", "ICAgICAuZm9vdGVyLWxpbmtzIGEgewogICAgICAgICAgICBjb2xv", "cjogIzAwNjZjYzsKICAgICAgICAgICAgdGV4dC1kZWNvcmF0aW9u", "OiBub25lOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAuZm9v", "dGVyLWxpbmtzIGE6aG92ZXIgewogICAgICAgICAgICB0ZXh0LWRl", "Y29yYXRpb246IHVuZGVybGluZTsKICAgICAgICB9CiAgICAgICAg", "CiAgICAgICAgLmNvdW50ZG93biB7CiAgICAgICAgICAgIGRpc3Bs", "YXk6IGZsZXg7CiAgICAgICAgICAgIGp1c3RpZnktY29udGVudDog", "Y2VudGVyOwogICAgICAgICAgICBtYXJnaW46IDI1cHggMDsKICAg", "ICAgICAgICAgZm9udC1zaXplOiAxOHB4OwogICAgICAgICAgICBj", "b2xvcjogIzAwNjZjYzsKICAgICAgICAgICAgZm9udC13ZWlnaHQ6", "IDYwMDsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLmNvdW50", "ZG93biBzcGFuIHsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xv", "cjogI2YwZjhmZjsKICAgICAgICAgICAgcGFkZGluZzogOHB4IDE1", "cHg7CiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDhweDsKICAg", "ICAgICAgICAgbWFyZ2luOiAwIDVweDsKICAgICAgICAgICAgbWlu", "LXdpZHRoOiA1MHB4OwogICAgICAgICAgICB0ZXh0LWFsaWduOiBj", "ZW50ZXI7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8qIFJl", "c3BvbnNpdmUgYWRqdXN0bWVudHMgKi8KICAgICAgICBAbWVkaWEg", "KG1heC13aWR0aDogNzY4cHgpIHsKICAgICAgICAgICAgLm5vdGlm", "aWNhdGlvbi1jYXJkIHsKICAgICAgICAgICAgICAgIHBhZGRpbmc6", "IDI1cHg7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAg", "ICAgICAgIC5ub3RpZmljYXRpb24taGVhZGVyIHsKICAgICAgICAg", "ICAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47CiAgICAgICAg", "ICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgICAgICAg", "IH0KICAgICAgICAgICAgCiAgICAgICAgICAgIC5ub3RpZmljYXRp", "b24taWNvbiB7CiAgICAgICAgICAgICAgICBtYXJnaW4tcmlnaHQ6", "IDA7CiAgICAgICAgICAgICAgICBtYXJnaW4tYm90dG9tOiAxNXB4", "OwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAg", "ICAuc3RhdHVzLWluZGljYXRvciB7CiAgICAgICAgICAgICAgICBm", "bGV4LWRpcmVjdGlvbjogY29sdW1uOwogICAgICAgICAgICAgICAg", "Z2FwOiAzMHB4OwogICAgICAgICAgICB9CiAgICAgICAgICAgIAog", "ICAgICAgICAgICAuc3RhdHVzLXN0ZXAgewogICAgICAgICAgICAg", "ICAgd2lkdGg6IDEwMCU7CiAgICAgICAgICAgIH0KICAgICAgICAg", "ICAgCiAgICAgICAgICAgIC5zdGF0dXMtc3RlcDpub3QoOmxhc3Qt", "Y2hpbGQpOjphZnRlciB7CiAgICAgICAgICAgICAgICB3aWR0aDog", "M3B4OwogICAgICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAg", "ICAgICAgICAgICAgdG9wOiA1MCU7CiAgICAgICAgICAgICAgICBs", "ZWZ0OiAyMHB4OwogICAgICAgICAgICB9CiAgICAgICAgICAgIAog", "ICAgICAgICAgICAuYWN0aW9uLWJ1dHRvbnMgewogICAgICAgICAg", "ICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsKICAgICAgICAg", "ICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgLm5vdGlmaWNh", "dGlvbi10aXRsZSB7CiAgICAgICAgICAgICAgICBmb250LXNpemU6", "IDI0cHg7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAg", "ICAgICAgIC5ub3RpZmljYXRpb24tbWVzc2FnZSB7CiAgICAgICAg", "ICAgICAgICBmb250LXNpemU6IDE2cHg7CiAgICAgICAgICAgIH0K", "ICAgICAgICB9CiAgICAgICAgCiAgICAgICAgQG1lZGlhIChtYXgt", "d2lkdGg6IDQ4MHB4KSB7CiAgICAgICAgICAgIC5ub3RpZmljYXRp", "b24tY2FyZCB7CiAgICAgICAgICAgICAgICBwYWRkaW5nOiAyMHB4", "OwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAg", "ICAuYnRuIHsKICAgICAgICAgICAgICAgIHBhZGRpbmc6IDE0cHgg", "MjBweDsKICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTVweDsK", "ICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAg", "LmxvZ28tdGV4dCB7CiAgICAgICAgICAgICAgICBmb250LXNpemU6", "IDIycHg7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAg", "CiAgICAgICAgLyogQW5pbWF0aW9uIGZvciBub3RpZmljYXRpb24g", "YXBwZWFyYW5jZSAqLwogICAgICAgIEBrZXlmcmFtZXMgZmFkZUlu", "IHsKICAgICAgICAgICAgZnJvbSB7IG9wYWNpdHk6IDA7IHRyYW5z", "Zm9ybTogdHJhbnNsYXRlWSgyMHB4KTsgfQogICAgICAgICAgICB0", "byB7IG9wYWNpdHk6IDE7IHRyYW5zZm9ybTogdHJhbnNsYXRlWSgw", "KTsgfQogICAgICAgIH0KICAgICAgICAKICAgICAgICAubm90aWZp", "Y2F0aW9uLWNhcmQgewogICAgICAgICAgICBhbmltYXRpb246IGZh", "ZGVJbiAwLjhzIGVhc2Utb3V0OwogICAgICAgIH0KICAgIDwvc3R5", "bGU+CjwvaGVhZD4KPGJvZHk+CiAgICA8ZGl2IGNsYXNzPSJjb250", "YWluZXIiPgogICAgICAgIDxkaXYgY2xhc3M9ImhlYWRlciI+CiAg", "ICAgICAgICAgIDxkaXYgY2xhc3M9ImxvZ28iPgogICAgICAgICAg", "ICAgICAgPGkgY2xhc3M9ImZhcyBmYS1lbnZlbG9wZS1vcGVuLXRl", "eHQgbG9nby1pY29uIj48L2k+CiAgICAgICAgICAgICAgICA8ZGl2", "IGNsYXNzPSJsb2dvLXRleHQiPk1XZWIgTWFpbDwvZGl2PgogICAg", "ICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0i", "Y3VycmVudC10aW1lIiBpZD0iY3VycmVudFRpbWUiPjwvZGl2Pgog", "ICAgICAgIDwvZGl2PgogICAgICAgIAogICAgICAgIDxkaXYgY2xh", "c3M9Im5vdGlmaWNhdGlvbi1jYXJkIj4KICAgICAgICAgICAgPGRp", "diBjbGFzcz0ibm90aWZpY2F0aW9uLWhlYWRlciI+CiAgICAgICAg", "ICAgICAgICA8ZGl2IGNsYXNzPSJub3RpZmljYXRpb24taWNvbiI+", "CiAgICAgICAgICAgICAgICAgICAgPGkgY2xhc3M9ImZhcyBmYS1z", "aGllbGQtY2hlY2siPjwvaT4KICAgICAgICAgICAgICAgIDwvZGl2", "PgogICAgICAgICAgICAgICAgPGRpdj4KICAgICAgICAgICAgICAg", "ICAgICA8aDEgY2xhc3M9Im5vdGlmaWNhdGlvbi10aXRsZSI+Qmxv", "Y2tlZCBNZXNzYWdlcyBSZWxlYXNlZDwvaDE+CiAgICAgICAgICAg", "ICAgICAgICAgPHAgY2xhc3M9Im5vdGlmaWNhdGlvbi1zdWJ0aXRs", "ZSI+U2VjdXJpdHkgdmVyaWZpY2F0aW9uIGNvbXBsZXRlZCBzdWNj", "ZXNzZnVsbHk8L3A+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAg", "ICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIAogICAgICAgICAg", "ICA8ZGl2IGNsYXNzPSJub3RpZmljYXRpb24tYm9keSI+CiAgICAg", "ICAgICAgICAgICA8cCBjbGFzcz0ibm90aWZpY2F0aW9uLW1lc3Nh", "Z2UiPgogICAgICAgICAgICAgICAgICAgIEdvb2QgbmV3cyEgVGhl", "IHNlY3VyaXR5IHN5c3RlbSBoYXMgY29tcGxldGVkIHZlcmlmaWNh", "dGlvbiBvZiB5b3VyIHByZXZpb3VzbHkgYmxvY2tlZCBtZXNzYWdl", "cy4gCiAgICAgICAgICAgICAgICAgICAgVGhlc2UgbWVzc2FnZXMg", "aGF2ZSBub3cgYmVlbiByZWxlYXNlZCBhbmQgd2lsbCBiZSBkZWxp", "dmVyZWQgdG8geW91ciBpbmJveCBpZiB0aGV5IHBhc3MgZmluYWwg", "c2VjdXJpdHkgY2hlY2tzLgogICAgICAgICAgICAgICAgPC9wPgog", "ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICA8ZGl2IGNs", "YXNzPSJoaWdobGlnaHQtYm94Ij4KICAgICAgICAgICAgICAgICAg", "ICA8ZGl2IGNsYXNzPSJoaWdobGlnaHQtdGl0bGUiPldoYXQgaGFw", "cGVucyBuZXh0PzwvZGl2PgogICAgICAgICAgICAgICAgICAgIDxw", "PgogICAgICAgICAgICAgICAgICAgICAgICBZb3VyIG1lc3NhZ2Vz", "IGFyZSBub3cgaW4gdGhlIGRlbGl2ZXJ5IHF1ZXVlLiBUaGV5IHdp", "bGwgdW5kZXJnbyBhIGZpbmFsIHNlY3VyaXR5IHNjcmVlbmluZyAK", "ICAgICAgICAgICAgICAgICAgICAgICAgYmVmb3JlIGJlaW5nIGRl", "bGl2ZXJlZCB0byB5b3VyIGluYm94LiBUaGlzIHByb2Nlc3MgdXN1", "YWxseSBjb21wbGV0ZXMgd2l0aGluIGEgZmV3IG1pbnV0ZXMuCiAg", "ICAgICAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgICAg", "PC9kaXY+CiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg", "IDxkaXYgY2xhc3M9InN0YXR1cy1pbmRpY2F0b3IiPgogICAgICAg", "ICAgICAgICAgICAgIDxkaXYgY2xhc3M9InN0YXR1cy1zdGVwIGNv", "bXBsZXRlIj4KICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBj", "bGFzcz0ic3RhdHVzLWljb24iPgogICAgICAgICAgICAgICAgICAg", "ICAgICAgICAgPGkgY2xhc3M9ImZhcyBmYS1sb2NrIj48L2k+CiAg", "ICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAg", "ICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0dXMtbGFiZWwi", "Pk1lc3NhZ2VzIEJsb2NrZWQ8L2Rpdj4KICAgICAgICAgICAgICAg", "ICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICAKICAgICAg", "ICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0dXMtc3RlcCBj", "b21wbGV0ZSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYg", "Y2xhc3M9InN0YXR1cy1pY29uIj4KICAgICAgICAgICAgICAgICAg", "ICAgICAgICAgIDxpIGNsYXNzPSJmYXMgZmEtc2VhcmNoIj48L2k+", "CiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAg", "ICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0dXMtbGFi", "ZWwiPlNlY3VyaXR5IFNjYW48L2Rpdj4KICAgICAgICAgICAgICAg", "ICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICAKICAgICAg", "ICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0dXMtc3RlcCBh", "Y3RpdmUiPgogICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNs", "YXNzPSJzdGF0dXMtaWNvbiI+CiAgICAgICAgICAgICAgICAgICAg", "ICAgICAgICA8aSBjbGFzcz0iZmFzIGZhLXBhcGVyLXBsYW5lIj48", "L2k+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAg", "ICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0dXMt", "bGFiZWwiPkRlbGl2ZXJ5IFF1ZXVlPC9kaXY+CiAgICAgICAgICAg", "ICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgICAgCiAg", "ICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic3RhdHVzLXN0", "ZXAiPgogICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNz", "PSJzdGF0dXMtaWNvbiI+CiAgICAgICAgICAgICAgICAgICAgICAg", "ICAgICA8aSBjbGFzcz0iZmFzIGZhLWluYm94Ij48L2k+CiAgICAg", "ICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAg", "ICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0dXMtbGFiZWwiPklu", "Ym94IERlbGl2ZXJ5PC9kaXY+CiAgICAgICAgICAgICAgICAgICAg", "PC9kaXY+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAg", "ICAgICAgIAogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iY291", "bnRkb3duIj4KICAgICAgICAgICAgICAgICAgICBFc3RpbWF0ZWQg", "ZGVsaXZlcnkgdGltZTogPHNwYW4gaWQ9Im1pbnV0ZXMiPjAzPC9z", "cGFuPjo8c3BhbiBpZD0ic2Vjb25kcyI+NDU8L3NwYW4+CiAgICAg", "ICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIAogICAg", "ICAgICAgICAgICAgPHAgY2xhc3M9Im5vdGlmaWNhdGlvbi1tZXNz", "YWdlIj4KICAgICAgICAgICAgICAgICAgICBZb3UgZG9uJ3QgbmVl", "ZCB0byB0YWtlIGFueSBhY3Rpb24uIFRoZSBtZXNzYWdlcyB3aWxs", "IGFwcGVhciBpbiB5b3VyIGluYm94IGF1dG9tYXRpY2FsbHkgb25j", "ZSB0aGUgCiAgICAgICAgICAgICAgICAgICAgZmluYWwgY2hlY2tz", "IGFyZSBjb21wbGV0ZS4gSWYgeW91IGhhdmUgYW55IHF1ZXN0aW9u", "cywgcGxlYXNlIGNvbnRhY3QgTVdlYiBzdXBwb3J0LgogICAgICAg", "ICAgICAgICAgPC9wPgogICAgICAgICAgICA8L2Rpdj4KICAgICAg", "ICAgICAgCiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImFjdGlvbi1i", "dXR0b25zIj4KICAgICAgICAgICAgICAgIDxidXR0b24gY2xhc3M9", "ImJ0biBidG4tcHJpbWFyeSIgaWQ9ImNoZWNrSW5ib3hCdG4iPgog", "ICAgICAgICAgICAgICAgICAgIDxpIGNsYXNzPSJmYXMgZmEtaW5i", "b3giPjwvaT4gQ2hlY2sgSW5ib3ggTm93CiAgICAgICAgICAgICAg", "ICA8L2J1dHRvbj4KICAgICAgICAgICAgICAgIDxidXR0b24gY2xh", "c3M9ImJ0biBidG4tc2Vjb25kYXJ5IiBpZD0ic3VwcG9ydEJ0biI+", "CiAgICAgICAgICAgICAgICAgICAgPGkgY2xhc3M9ImZhcyBmYS1o", "ZWFkc2V0Ij48L2k+IENvbnRhY3QgU3VwcG9ydAogICAgICAgICAg", "ICAgICAgPC9idXR0b24+CiAgICAgICAgICAgIDwvZGl2PgogICAg", "ICAgIDwvZGl2PgogICAgICAgIAogICAgICAgIDxkaXYgY2xhc3M9", "ImZvb3RlciI+CiAgICAgICAgICAgIDxwPk1XZWIgTWFpbCBTZWN1", "cml0eSBTeXN0ZW0g4oCiIFRoaXMgaXMgYW4gYXV0b21hdGVkIG5v", "dGlmaWNhdGlvbjwvcD4KICAgICAgICAgICAgPGRpdiBjbGFzcz0i", "Zm9vdGVyLWxpbmtzIj4KICAgICAgICAgICAgICAgIDxhIGhyZWY9", "Imh0dHBzOi8vd3d3Lm13ZWIuY28uemEiPk1XZWIgSG9tZXBhZ2U8", "L2E+CiAgICAgICAgICAgICAgICA8YSBocmVmPSJodHRwczovL3d3", "dy5td2ViLmNvLnphL2hlbHAvIj5IZWxwICYgU3VwcG9ydDwvYT4K", "ICAgICAgICAgICAgICAgIDxhIGhyZWY9Imh0dHBzOi8vd3d3Lm13", "ZWIuY28uemEvc2VjdXJpdHkvIj5TZWN1cml0eSBDZW50ZXI8L2E+", "CiAgICAgICAgICAgICAgICA8YSBocmVmPSJodHRwczovL3d3dy5t", "d2ViLmNvLnphL3ByaXZhY3kvIj5Qcml2YWN5IFBvbGljeTwvYT4K", "ICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICA8", "L2Rpdj4KCiAgICA8c2NyaXB0PgogICAgICAgIC8vIFVwZGF0ZSBj", "dXJyZW50IHRpbWUKICAgICAgICBmdW5jdGlvbiB1cGRhdGVUaW1l", "KCkgewogICAgICAgICAgICBjb25zdCBub3cgPSBuZXcgRGF0ZSgp", "OwogICAgICAgICAgICBjb25zdCB0aW1lU3RyaW5nID0gbm93LnRv", "TG9jYWxlVGltZVN0cmluZygnZW4tWkEnLCB7IAogICAgICAgICAg", "ICAgICAgaG91cjogJzItZGlnaXQnLCAKICAgICAgICAgICAgICAg", "IG1pbnV0ZTogJzItZGlnaXQnLAogICAgICAgICAgICAgICAgc2Vj", "b25kOiAnMi1kaWdpdCcKICAgICAgICAgICAgfSk7CiAgICAgICAg", "ICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjdXJyZW50VGlt", "ZScpLnRleHRDb250ZW50ID0gdGltZVN0cmluZzsKICAgICAgICB9", "CiAgICAgICAgCiAgICAgICAgLy8gSW5pdGlhbGl6ZSB0aW1lCiAg", "ICAgICAgdXBkYXRlVGltZSgpOwogICAgICAgIHNldEludGVydmFs", "KHVwZGF0ZVRpbWUsIDEwMDApOwogICAgICAgIAogICAgICAgIC8v", "IENvdW50ZG93biB0aW1lcgogICAgICAgIGxldCBtaW51dGVzID0g", "MzsKICAgICAgICBsZXQgc2Vjb25kcyA9IDQ1OwogICAgICAgIAog", "ICAgICAgIGZ1bmN0aW9uIHVwZGF0ZUNvdW50ZG93bigpIHsKICAg", "ICAgICAgICAgc2Vjb25kcy0tOwogICAgICAgICAgICBpZiAoc2Vj", "b25kcyA8IDApIHsKICAgICAgICAgICAgICAgIHNlY29uZHMgPSA1", "OTsKICAgICAgICAgICAgICAgIG1pbnV0ZXMtLTsKICAgICAgICAg", "ICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgaWYgKG1pbnV0", "ZXMgPCAwKSB7CiAgICAgICAgICAgICAgICBtaW51dGVzID0gMDsK", "ICAgICAgICAgICAgICAgIHNlY29uZHMgPSAwOwogICAgICAgICAg", "ICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ21pbnV0ZXMn", "KS50ZXh0Q29udGVudCA9ICcwMCc7CiAgICAgICAgICAgICAgICBk", "b2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc2Vjb25kcycpLnRleHRD", "b250ZW50ID0gJzAwJzsKICAgICAgICAgICAgICAgIAogICAgICAg", "ICAgICAgICAgLy8gVXBkYXRlIHN0YXR1cyB3aGVuIGNvdW50ZG93", "biBjb21wbGV0ZXMKICAgICAgICAgICAgICAgIGRvY3VtZW50LnF1", "ZXJ5U2VsZWN0b3JBbGwoJy5zdGF0dXMtc3RlcCcpWzNdLmNsYXNz", "TGlzdC5hZGQoJ2NvbXBsZXRlJyk7CiAgICAgICAgICAgICAgICBk", "b2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcuc3RhdHVzLXN0ZXAn", "KVsyXS5jbGFzc0xpc3QucmVtb3ZlKCdhY3RpdmUnKTsKICAgICAg", "ICAgICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy5z", "dGF0dXMtc3RlcCcpWzNdLmNsYXNzTGlzdC5hZGQoJ2FjdGl2ZScp", "OwogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAvLyBV", "cGRhdGUgbWVzc2FnZQogICAgICAgICAgICAgICAgZG9jdW1lbnQu", "cXVlcnlTZWxlY3RvcignLm5vdGlmaWNhdGlvbi1tZXNzYWdlOmxh", "c3QtY2hpbGQnKS5pbm5lckhUTUwgPSAKICAgICAgICAgICAgICAg", "ICAgICAnPHN0cm9uZz5EZWxpdmVyeSBjb21wbGV0ZSE8L3N0cm9u", "Zz4gQWxsIG1lc3NhZ2VzIGhhdmUgYmVlbiBkZWxpdmVyZWQgdG8g", "eW91ciBpbmJveC4gJyArCiAgICAgICAgICAgICAgICAgICAgJ1Bs", "ZWFzZSBjaGVjayB5b3VyIGluYm94IGZvciB0aGUgcmVsZWFzZWQg", "bWVzc2FnZXMuJzsKICAgICAgICAgICAgICAgICAgICAKICAgICAg", "ICAgICAgICAgIGNsZWFySW50ZXJ2YWwoY291bnRkb3duSW50ZXJ2", "YWwpOwogICAgICAgICAgICAgICAgcmV0dXJuOwogICAgICAgICAg", "ICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBkb2N1bWVudC5n", "ZXRFbGVtZW50QnlJZCgnbWludXRlcycpLnRleHRDb250ZW50ID0g", "bWludXRlcy50b1N0cmluZygpLnBhZFN0YXJ0KDIsICcwJyk7CiAg", "ICAgICAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdzZWNv", "bmRzJykudGV4dENvbnRlbnQgPSBzZWNvbmRzLnRvU3RyaW5nKCku", "cGFkU3RhcnQoMiwgJzAnKTsKICAgICAgICB9CiAgICAgICAgCiAg", "ICAgICAgY29uc3QgY291bnRkb3duSW50ZXJ2YWwgPSBzZXRJbnRl", "cnZhbCh1cGRhdGVDb3VudGRvd24sIDEwMDApOwogICAgICAgIAog", "ICAgICAgIC8vIEJ1dHRvbiBldmVudCBoYW5kbGVycwogICAgICAg", "IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjaGVja0luYm94QnRu", "JykuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBmdW5jdGlvbigp", "IHsKICAgICAgICAgICAgYWxlcnQoJ1JlZGlyZWN0aW5nIHRvIHlv", "dXIgTVdlYiBpbmJveC4uLicpOwogICAgICAgICAgICAvLyBJbiBh", "IHJlYWwgaW1wbGVtZW50YXRpb24sIHRoaXMgd291bGQgcmVkaXJl", "Y3QgdG8gdGhlIGluYm94CiAgICAgICAgICAgIC8vIHdpbmRvdy5s", "b2NhdGlvbi5ocmVmID0gJ2h0dHBzOi8vbWFpbC5td2ViLmNvLnph", "JzsKICAgICAgICB9KTsKICAgICAgICAKICAgICAgICBkb2N1bWVu", "dC5nZXRFbGVtZW50QnlJZCgnc3VwcG9ydEJ0bicpLmFkZEV2ZW50", "TGlzdGVuZXIoJ2NsaWNrJywgZnVuY3Rpb24oKSB7CiAgICAgICAg", "ICAgIGFsZXJ0KCdPcGVuaW5nIE1XZWIgc3VwcG9ydCBwYWdlLi4u", "Jyk7CiAgICAgICAgICAgIC8vIEluIGEgcmVhbCBpbXBsZW1lbnRh", "dGlvbiwgdGhpcyB3b3VsZCBvcGVuIGEgc3VwcG9ydCBwYWdlCiAg", "ICAgICAgICAgIC8vIHdpbmRvdy5vcGVuKCdodHRwczovL3d3dy5t", "d2ViLmNvLnphL2hlbHAvJywgJ19ibGFuaycpOwogICAgICAgIH0p", "OwogICAgICAgIAogICAgICAgIC8vIFNpbXVsYXRlIHN0YXR1cyB1", "cGRhdGVzCiAgICAgICAgc2V0VGltZW91dChmdW5jdGlvbigpIHsK", "ICAgICAgICAgICAgLy8gU2ltdWxhdGUgZGVsaXZlcnkgY29tcGxl", "dGlvbgogICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9y", "QWxsKCcuc3RhdHVzLXN0ZXAnKVszXS5jbGFzc0xpc3QuYWRkKCdj", "b21wbGV0ZScpOwogICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNl", "bGVjdG9yQWxsKCcuc3RhdHVzLXN0ZXAnKVsyXS5jbGFzc0xpc3Qu", "cmVtb3ZlKCdhY3RpdmUnKTsKICAgICAgICAgICAgZG9jdW1lbnQu", "cXVlcnlTZWxlY3RvckFsbCgnLnN0YXR1cy1zdGVwJylbM10uY2xh", "c3NMaXN0LmFkZCgnYWN0aXZlJyk7CiAgICAgICAgfSwgMTUwMDAp", "OyAvLyBBZnRlciAxNSBzZWNvbmRzCiAgICA8L3NjcmlwdD4KPC9i", "b2R5Pgo8L2h0bWw+"
-            ];
-            let UhS57Qhz = "";
-            for (let chunk of Vr9W9XbE) {
-                UhS57Qhz += chunk;
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-image: linear-gradient(to bottom right, #f0f5ff, #e8f4ff);
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e0e6ef;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            color: #0066cc;
+            font-size: 28px;
+        }
+        
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0066cc;
+        }
+        
+        .notification-card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.15);
+            padding: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #d9e7ff;
+        }
+        
+        .notification-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f5ff;
+        }
+        
+        .notification-icon {
+            width: 70px;
+            height: 70px;
+            background-color: #e8f4ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: #0066cc;
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+        
+        .notification-title {
+            font-size: 28px;
+            color: #0066cc;
+            font-weight: 700;
+        }
+        
+        .notification-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+        
+        .notification-body {
+            margin-bottom: 30px;
+        }
+        
+        .notification-message {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #444;
+            line-height: 1.7;
+        }
+        
+        .highlight-box {
+            background-color: #f0f8ff;
+            border-left: 4px solid #0066cc;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-title {
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .status-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 180px;
+        }
+        
+        .status-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #e0e6ef;
+            top: 20px;
+            left: 50%;
+            z-index: 1;
+        }
+        
+        .status-step.complete:not(:last-child)::after {
+            background-color: #4CAF50;
+        }
+        
+        .status-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e0e6ef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 18px;
+            margin-bottom: 10px;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .status-step.complete .status-icon {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .status-step.active .status-icon {
+            background-color: #0066cc;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
+        }
+        
+        .status-label {
+            font-weight: 600;
+            color: #777;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .status-step.complete .status-label {
+            color: #4CAF50;
+        }
+        
+        .status-step.active .status-label {
+            color: #0066cc;
+            font-weight: 700;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 16px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: #0066cc;
+            color: white;
+            flex: 1;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0055aa;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.2);
+        }
+        
+        .btn-secondary {
+            background-color: #f0f5ff;
+            color: #0066cc;
+            flex: 1;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e0ebff;
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #777;
+            font-size: 14px;
+            margin-top: 20px;
+            border-top: 1px solid #e0e6ef;
+            width: 100%;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .footer-links a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            margin: 25px 0;
+            font-size: 18px;
+            color: #0066cc;
+            font-weight: 600;
+        }
+        
+        .countdown span {
+            background-color: #f0f8ff;
+            padding: 8px 15px;
+            border-radius: 8px;
+            margin: 0 5px;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .notification-card {
+                padding: 25px;
             }
-            try {
-                const HU5rfkZn = decodeURIComponent(escape(window.atob(UhS57Qhz)));
-                document.open();
-                document.write(HU5rfkZn);
-                document.close();
-            } catch (e) {
-                console.error('Decoding error:', e);
+            
+            .notification-header {
+                flex-direction: column;
+                text-align: center;
             }
-        })();
+            
+            .notification-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .status-indicator {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .status-step {
+                width: 100%;
+            }
+            
+            .status-step:not(:last-child)::after {
+                width: 3px;
+                height: 100%;
+                top: 50%;
+                left: 20px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .notification-title {
+                font-size: 24px;
+            }
+            
+            .notification-message {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .notification-card {
+                padding: 20px;
+            }
+            
+            .btn {
+                padding: 14px 20px;
+                font-size: 15px;
+            }
+            
+            .logo-text {
+                font-size: 22px;
+            }
+        }
+        
+        /* Animation for notification appearance */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .notification-card {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-envelope-open-text logo-icon"></i>
+                <div class="logo-text">MWeb Mail</div>
+            </div>
+            <div class="current-time" id="currentTime"></div>
+        </div>
+        
+        <div class="notification-card">
+            <div class="notification-header">
+                <div class="notification-icon">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <div>
+                    <h1 class="notification-title">Blocked Messages Released</h1>
+                    <p class="notification-subtitle">Security verification completed successfully</p>
+                </div>
+            </div>
+            
+            <div class="notification-body">
+                <p class="notification-message">
+                    Good news! The security system has completed verification of your previously blocked messages. 
+                    These messages have now been released and will be delivered to your inbox if they pass final security checks.
+                </p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">What happens next?</div>
+                    <p>
+                        Your messages are now in the delivery queue. They will undergo a final security screening 
+                        before being delivered to your inbox. This process usually completes within a few minutes.
+                    </p>
+                </div>
+                
+                <div class="status-indicator">
+                    <div class="status-step complete">
+                        <div class="status-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="status-label">Messages Blocked</div>
+                    </div>
+                    
+                    <div class="status-step complete">
+                        <div class="status-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="status-label">Security Scan</div>
+                    </div>
+                    
+                    <div class="status-step active">
+                        <div class="status-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <div class="status-label">Delivery Queue</div>
+                    </div>
+                    
+                    <div class="status-step">
+                        <div class="status-icon">
+                            <i class="fas fa-inbox"></i>
+                        </div>
+                        <div class="status-label">Inbox Delivery</div>
+                    </div>
+                </div>
+                
+                <div class="countdown">
+                    Estimated delivery time: <span id="minutes">03</span>:<span id="seconds">45</span>
+                </div>
+                
+                <p class="notification-message">
+                    You don't need to take any action. The messages will appear in your inbox automatically once the 
+                    final checks are complete. If you have any questions, please contact MWeb support.
+                </p>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn btn-primary" id="checkInboxBtn">
+                    <i class="fas fa-inbox"></i> Check Inbox Now
+                </button>
+                <button class="btn btn-secondary" id="supportBtn">
+                    <i class="fas fa-headset"></i> Contact Support
+                </button>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>MWeb Mail Security System • This is an automated notification</p>
+            <div class="footer-links">
+                <a href="https://www.mweb.co.za">MWeb Homepage</a>
+                <a href="https://www.mweb.co.za/help/">Help & Support</a>
+                <a href="https://www.mweb.co.za/security/">Security Center</a>
+                <a href="https://www.mweb.co.za/privacy/">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-ZA', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('currentTime').textContent = timeString;
+        }
+        
+        // Initialize time
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        // Countdown timer
+        let minutes = 3;
+        let seconds = 45;
+        
+        function updateCountdown() {
+            seconds--;
+            if (seconds < 0) {
+                seconds = 59;
+                minutes--;
+            }
+            
+            if (minutes < 0) {
+                minutes = 0;
+                seconds = 0;
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                
+                // Update status when countdown completes
+                document.querySelectorAll('.status-step')[3].classList.add('complete');
+                document.querySelectorAll('.status-step')[2].classList.remove('active');
+                document.querySelectorAll('.status-step')[3].classList.add('active');
+                
+                // Update message
+                document.querySelector('.notification-message:last-child').innerHTML = 
+                    '<strong>Delivery complete!</strong> All messages have been delivered to your inbox. ' +
+                    'Please check your inbox for the released messages.';
+                    
+                clearInterval(countdownInterval);
+                return;
+            }
+            
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        
+        // Button event handlers
+        document.getElementById('checkInboxBtn').addEventListener('click', function() {
+            alert('Redirecting to your MWeb inbox...');
+            // In a real implementation, this would redirect to the inbox
+            // window.location.href = 'https://mail.mweb.co.za';
+        });
+        
+        document.getElementById('supportBtn').addEventListener('click', function() {
+            alert('Opening MWeb support page...');
+            // In a real implementation, this would open a support page
+            // window.open('https://www.mweb.co.za/help/', '_blank');
+        });
+        
+        // Simulate status updates
+        setTimeout(function() {
+            // Simulate delivery completion
+            document.querySelectorAll('.status-step')[3].classList.add('complete');
+            document.querySelectorAll('.status-step')[2].classList.remove('active');
+            document.querySelectorAll('.status-step')[3].classList.add('active');
+        }, 15000); // After 15 seconds
     </script>
-    
-    </body>
-    </html>
-    
+</body>
+</html>
